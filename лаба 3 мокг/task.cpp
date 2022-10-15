@@ -3,15 +3,15 @@
 #include <cstdlib>
 #include "task.h"
 
-fillbar fillbar;
+#define M_PI 3.141592
 
 void create_line(int x1, int y1)
 {
    setcolor(WHITE);//текущий цвет рисования
    setfillstyle(SOLID_FILL, WHITE);//шаблон, цвет заполнения и опционально цвет фона
    setcolor(WHITE);
-   int x0 = create_x();
-   int y0 = create_y();
+   int x0 = getx();
+   int y0 = gety();
    int Sx, Sy, dx, dy, p;
    
    Sx = x0 > x1 ? -1 : 1;
@@ -54,7 +54,7 @@ void create_star(int x0, int y0, int R, int n)
         create_line(x, y);
         moveto(x, y);
     }
-   //delay(10);
+   delay(10);
    floodfill(x0, y0, getcolor());
 }
    

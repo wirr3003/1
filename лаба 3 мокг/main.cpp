@@ -9,9 +9,9 @@ using namespace std;
 
 void rebar()
 {
-   create_control(PLUS1 40, 360, "plus1.bmp");
+   create_control(PLUS1, 40, 360, "plus1.bmp");
    create_control(MINUS1, 170, 360, "minus1.bmp");
-   create_control(PLUS2 40, 360, "plus2.bmp");
+   create_control(PLUS2, 40, 360, "plus2.bmp");
    create_control(MINUS2, 170, 360, "minus2.bmp");
    create_control(SAVE, 350, 360, "SAVE.bmp");
    create_control(EXIT, 400, 360, "EXIT.bmp");
@@ -42,7 +42,7 @@ void create_N()
 {
       int prom1 = change_rad();
       int prom2 = change_tops();
-      setbkmode(TRANSPARENT); 
+      setbkcolor(TRANSPARENT); 
       settextstyle(EMPTY_FILL, HORIZ_DIR, 37);      
       outtextxy(210, 40, to_string(prom1).c_str());
       outtextxy(525, 40, to_string(prom2).c_str());

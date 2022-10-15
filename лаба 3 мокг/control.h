@@ -12,7 +12,7 @@ struct Control{
    int bottom;
 };
 
-void create_control(int, int, int);
+void create_control(int, int, int, const char *);
 int select_control();
 
 #endif
