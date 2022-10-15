@@ -2,8 +2,7 @@
 #include "graphics.h"
 #include <cstdlib>
 #include "task.h"
-
-#define M_PI 3.141592
+#include "ctime"
 
 void create_line(int x1, int y1)
 {
@@ -56,6 +55,20 @@ void create_star(int x0, int y0, int R, int n)
     }
    delay(10);
    floodfill(x0, y0, getcolor());
+}
+
+void solve(int R, int n)
+{
+   
+   srand(time(0));
+   int x, y;
+   int stars = rand() % (10-2) + 2;
+   for (int i = 0; i < stars; i++)
+   {
+      x = rand() % (SIZEWINDOW - (SIZEBUTTON + 2*R)) + SIZEBUTTON + 2*R;
+      y = rand() % (SIZEWINDOW -  2*R) +  2*R;
+      create_star(x, y, R, n);
+   }
 }
    
 void save()

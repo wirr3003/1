@@ -1,10 +1,12 @@
 # control.h task.h
 !control.cpp control.h graphics.h keys_n_colors.h #<#>
 !main.cpp control.h graphics.h keys_n_colors.h task.h time.h #<#>
-!task.cpp cstdlib graphics.h keys_n_colors.h limits.h math.h stdlib.h task.h #<#>
+!task.cpp cstdlib ctime graphics.h keys_n_colors.h limits.h math.h stdlib.h task.h time.h #<#>
  struct@Control _type_ #<control.h>
-M_PI #<task.cpp>
+M_PI #<task.h>
 R : int #<main.cpp>
+SIZEBUTTON #<task.h>
+SIZEWINDOW #<task.h>
 change_rad : intn=5;int #<main.cpp>
 change_rad() -> int #<task.h>
 change_tops() -> int #<task.h>
@@ -18,6 +20,8 @@ create_star(int x0, int y0, int n, int R) -> void #<task.h>
 rebar() -> void #<main.cpp>
 save() -> void #<task.h>
 select_control() -> int #<control.h>
+solve(int R, int n) -> void #<task.cpp>
+solve(int, int) -> void #<task.h>
 	Control::left : int #<control.h>
 	Control::top : int #<control.h>
 	Control::right : int #<control.h>

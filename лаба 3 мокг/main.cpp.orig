@@ -36,7 +36,7 @@ int change_tops()
    if (n < 5) {
       n = 5;
    }
-   if (n > 12) {
+      if (n > 12) {
       n = 12;
    }
    return n;
